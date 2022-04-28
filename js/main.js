@@ -122,6 +122,31 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/components/header.js":
+/*!*************************************!*\
+  !*** ./src/js/components/header.js ***!
+  \*************************************/
+/***/ (() => {
+
+header = document.querySelector('.header');
+main = document.querySelector('.main');
+var prevScroll = window.scrollY;
+window.addEventListener('scroll', function () {
+  scroll = window.scrollY;
+
+  if (scroll > 0) {
+    header.classList.add('fixed');
+    main.classList.add('fixed'); // Добавляю падинг, из-за того , что под фиксед проваливается
+  } else {
+    header.classList.remove('fixed');
+    main.classList.remove('fixed'); // Добавляю падинг, из-за того , что под фиксед проваливается
+  }
+
+  prevScroll = scroll;
+});
+
+/***/ }),
+
 /***/ "./src/js/functions/mobile-check.js":
 /*!******************************************!*\
   !*** ./src/js/functions/mobile-check.js ***!
@@ -546,6 +571,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_functions */ "./src/js/_functions.js");
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_components */ "./src/js/_components.js");
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/header */ "./src/js/components/header.js");
+/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_header__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
